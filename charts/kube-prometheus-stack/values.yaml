@@ -1,0 +1,8 @@
+kube-prometheus-stack:
+  prometheus:
+    service:
+      type: NodePort
+      nodePort: 30090
+
+  grafana:
+    enabled: true
