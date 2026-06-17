@@ -6,19 +6,21 @@ kube-prometheus-stack:
 
   grafana:
     enabled: true
+
     additionalDataSources:
       - name: Prometheus-node-exporter
         type: prometheus
         url: http://192.168.178.253:9090
         access: proxy
         isDefault: false
+
     persistence:
-    enabled: true
-    type: pvc
-    storageClassName: local-path
-    accessModes:
-      - ReadWriteOnce
-    size: 5Gi
+      enabled: true
+      type: pvc
+      storageClassName: local-path
+      accessModes:
+        - ReadWriteOnce
+      size: 5Gi
 
   dashboards:
     default:
